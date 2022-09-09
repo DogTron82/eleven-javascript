@@ -1,0 +1,63 @@
+.lifepath {
+    display: block;
+    margin: 0 auto; 
+}
+
+#numerologyCalculator {
+    padding: 50px 0px;
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #00000020;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #00000020;
+}
+
+.overskrift {
+    color: #111111;
+    padding: 10px 0px 40px 0px;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+
+.underoverskrift {
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    margin-left: 70px;
+    font-family: Poppins;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+input[type=number] {
+    display: block;
+    width: 300px;
+    margin-left: 70px;
+    background-color: #00000007;
+    border: 0px;
+    border-bottom: 3px;
+    border-style: solid;
+    height: 30px;
+    border-image: linear-gradient(to right, darkorchid, darkblue ) 1;
+    outline: none;
+}
+
+button {
+    font-family: poppins;
+    font-weight: 500;
+    border-radius: 0;
+    background: linear-gradient(-217deg, darkorchid, darkblue);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: black;
+}
