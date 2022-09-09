@@ -51,25 +51,25 @@ if(lifepathdag <= 9) {
 
 //här räknar vi ut år, det är alltid 4 värden i denna array oavsettt så här behøvs inga kontroller.
 let year1 = 0;
-const year = (""+lifepathyear).split("");  
-   let simplyfyyear=  +year[0] + +year[1] + +year[2] + +year[3];
+const year = (""+lifepathyear).split("");   
+   let simplyfyyear=  +year[0] + +year[1] + +year[2] + +year[3];  // skapar ny string med som adderar ihop årets siffror. 
 
-const year2 = (""+simplyfyyear).split("");  // här deklarear vi de årtal så att det blir en till array
+const year2 = (""+simplyfyyear).split("");  // här deklarear vi de årtal så att det blir en till array så att vi kan addera dem om värdet är över 10. 
 
 if (simplyfyyear >= 10 ) {
   
-   year1  = +year2[0] + +year2[1];
-   console.log(year1);
+   year1  = +year2[0] + +year2[1]; // Addera om värdet är över 10. 
+   
 
 }
-if (simplyfyyear <= 9 ) { 
+if (simplyfyyear <= 9 ) {  // kontrollerar att alt används från första strängen då värdet redan ligger under 10 och inte behör något speciellt att göra.
 
 year1 = simplyfyyear;
-console.log(year1);
+
 
 }
 
-//Korrekt beregning
+
 
 
 
@@ -80,19 +80,19 @@ let masternr = 0; //deklarerar vi master nr som vi kommer att skicka totalens v�
 const totalen = +vardag + +varmanad + +year1; //räknar ut totalen med innbyggada fel, check av fel kontrolleras nedan
 const kontrollslutet = (""+totalen).split("");  // bygger en array for att korrigera om ett fel uppstått med för stort nr. 
 
-if (totalen <= 9) {
+if (totalen <= 9) {   // är värdet i strängen lika med eller mindre än 9 så skickar vi tillbaka värdet i string masternr.
    masternr = totalen
 
 }
 
-if (totalen > 10 ) {
+if (totalen > 10 ) { // är värdet i strängen större än eller lika med 10 så kör vi addering av den strängen så att total värdet blir ett 1 digit värde. 
 
    let kontrollnr = +kontrollslutet[0] + +kontrollslutet[1];
    masternr = kontrollnr;
 }
 
 
-
+// sektion som bara avhandlar 11 och 22 
 
 if (totalen == 11 ) { // check på 11
 
@@ -104,7 +104,7 @@ if (totalen == 11 ) { // check på 11
 
 if (totalen == 22  ) { // check på 22
 
-    console.log(masternr);
+    
    window.location.href = 'https://elevenjewelry.com/numerology/22-3';
    return //avslutar funktionen
    
@@ -112,79 +112,55 @@ if (totalen == 22  ) { // check på 22
    }
 
 
-
-//Kontrollerar så att ett nr alltid är hanterbart och kan justeras vid behov.    använder arrayen som skapats vid kontrollslutet och adderar ihop dem till en ny total så att nummerserier blir korrekt. 
-   
-
-                    
-   
+// slut på sektion som avhandlar masternummer 11 och 22. 
 
 
-
-
-
-
-    
-
-
-
-   
-
-
-
-
-
-
-   
-
-   
-
-   
+  
 //segment för redirects baserat på nr. 
 
 if (masternr == 1) {
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/1-3';
    
    return
 }
 
 if (masternr == 2) {
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/2-3';
    return
 }
 
 if (masternr == 3) {
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/3-3';
    return
 }
 if (masternr == 4) {
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/4-3';
    return
 }
 
 
 if (masternr == 5) {
-      console.log(masternr);
+      
       window.location.href = 'https://elevenjewelry.com/numerology/5-3';
       return
 }
 if (masternr == 6) {
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/6-3';
    return
    
 }
 if (masternr == 7) {
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/7-3';
    
 }
 if (masternr == 8) {
-   console.log(masternr);   
+    
    window.location.href = 'https://elevenjewelry.com/numerology/8-3';
    return
    
@@ -192,7 +168,7 @@ if (masternr == 8) {
 
 if (masternr == 9) {
    
-   console.log(masternr);
+   
    window.location.href = 'https://elevenjewelry.com/numerology/9-3';
    return
    
